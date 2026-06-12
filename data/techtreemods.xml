@@ -1,0 +1,470 @@
+<techtreemods>
+
+    <tech mergeMode="add" name="CityBuildingEnhancedEnable" type="Normal">
+        <dbid>90100</dbid>
+        <status>UNOBTAINABLE</status>
+        <flag>Shadow</flag>
+        <effects>
+            <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+                <target type="ProtoUnit">ModArchitect</target>
+            </effect>
+
+            <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+            <!-- Technologies  -->
+            <effect type="TechStatus" status="obtainable">ModInfantryFocus</effect>
+            <effect type="CommandAdd" tech="ModInfantryFocus" page="0" column="0">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+            <effect type="TechStatus" status="obtainable">ModCavalryFocus</effect>
+            <effect type="CommandAdd" tech="ModCavalryFocus" page="0" column="1">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+            <effect type="TechStatus" status="obtainable">ModArtilleryFocus</effect>
+            <effect type="CommandAdd" tech="ModArtilleryFocus" page="0" column="2">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+        </effects>
+    </tech>
+
+    <tech mergeMode="add" name="ModInfantryFocus" type="Normal">
+        <dbid>90101</dbid>
+        <displaynameid>990030</displaynameid>
+        <rollovertextid>990031</rollovertextid>
+        <icon>resources\images\icons\techs\Squared Icons\Infantry_Focus.png</icon>
+        <researchpoints>30.0000</researchpoints>
+        <status>UNOBTAINABLE</status>
+
+        <cost resourcetype="Food">300.0000</cost>
+        <cost resourcetype="Wood">300.0000</cost>
+        <cost resourcetype="Gold">300.0000</cost>
+
+        <effects>
+            <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+                <target type="ProtoUnit">AbstractInfantry</target>
+            </effect>
+
+            <effect type="Data" amount="0.90" subtype="Cost" resource="Food"
+                relativity="BasePercent">
+                <target type="ProtoUnit">AbstractInfantry</target>
+            </effect>
+
+            <effect type="Data" amount="0.90" subtype="Cost" resource="Wood"
+                relativity="BasePercent">
+                <target type="ProtoUnit">AbstractInfantry</target>
+            </effect>
+
+            <effect type="Data" amount="0.90" subtype="Cost" resource="Gold"
+                relativity="BasePercent">
+                <target type="ProtoUnit">AbstractInfantry</target>
+            </effect>
+
+
+            <!-- Focus Unlocks  -->
+            <effect type="TechStatus" status="obtainable">ModConscription</effect>
+            <effect type="CommandAdd" tech="ModConscription" page="2" column="0">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+            <!-- Focus Blocks  -->
+            <effect type="TechStatus" status="unobtainable">ModInfantryFocus</effect>
+            <effect type="CommandRemove" tech="ModInfantryFocus">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+            <effect type="TechStatus" status="unobtainable">ModCavalryFocus</effect>
+            <effect type="CommandRemove" tech="ModCavalryFocus">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+            <effect type="TechStatus" status="unobtainable">ModArtilleryFocus</effect>
+            <effect type="CommandRemove" tech="ModArtilleryFocus">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+        </effects>
+    </tech>
+
+    <tech mergeMode="add" name="ModCavalryFocus" type="Normal">
+        <dbid>90102</dbid>
+        <displaynameid>990032</displaynameid>
+        <rollovertextid>990033</rollovertextid>
+        <icon>resources\images\icons\techs\Squared Icons\Cavalry_Focus.png</icon>
+        <researchpoints>30.0000</researchpoints>
+        <status>UNOBTAINABLE</status>
+
+        <cost resourcetype="Food">300.0000</cost>
+        <cost resourcetype="Wood">300.0000</cost>
+        <cost resourcetype="Gold">300.0000</cost>
+
+        <effects>
+            <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+                <target type="ProtoUnit">AbstractCavalry</target>
+            </effect>
+
+            <!-- Focus Blocks  -->
+            <effect type="TechStatus" status="unobtainable">ModInfantryFocus</effect>
+            <effect type="CommandRemove" tech="ModInfantryFocus">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+            <effect type="TechStatus" status="unobtainable">ModCavalryFocus</effect>
+            <effect type="CommandRemove" tech="ModCavalryFocus">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+            <effect type="TechStatus" status="unobtainable">ModArtilleryFocus</effect>
+            <effect type="CommandRemove" tech="ModArtilleryFocus">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+        </effects>
+    </tech>
+
+    <tech mergeMode="add" name="ModArtilleryFocus" type="Normal">
+        <dbid>90103</dbid>
+        <displaynameid>990034</displaynameid>
+        <rollovertextid>990035</rollovertextid>
+        <icon>resources\images\icons\techs\Squared Icons\Artillery_Focus.png</icon>
+        <researchpoints>30.0000</researchpoints>
+        <status>UNOBTAINABLE</status>
+
+        <cost resourcetype="Food">300.0000</cost>
+        <cost resourcetype="Wood">300.0000</cost>
+        <cost resourcetype="Gold">300.0000</cost>
+
+        <effects>
+            <effect type="Data" amount="1.10" subtype="Hitpoints" relativity="BasePercent">
+                <target type="ProtoUnit">AbstractArtillery</target>
+            </effect>
+
+            <!-- Focus Blocks  -->
+            <effect type="TechStatus" status="unobtainable">ModInfantryFocus</effect>
+            <effect type="CommandRemove" tech="ModInfantryFocus">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+            <effect type="TechStatus" status="unobtainable">ModCavalryFocus</effect>
+            <effect type="CommandRemove" tech="ModCavalryFocus">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+            <effect type="TechStatus" status="unobtainable">ModArtilleryFocus</effect>
+            <effect type="CommandRemove" tech="ModArtilleryFocus">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+        </effects>
+    </tech>
+
+    <!-- Infantry Focus Unlocks -->
+    <tech mergeMode="add" name="ModConscription" type="Normal">
+        <dbid>90104</dbid>
+        <displaynameid>990040</displaynameid>
+        <rollovertextid>990041</rollovertextid>
+        <researchpoints>40.0000</researchpoints>
+        <status>UNOBTAINABLE</status>
+        <icon>resources\images\icons\techs\Squared Icons\Conscripts_companies.png</icon>
+
+        <allowedage>1</allowedage>
+        <cost resourcetype="Food">100.0000</cost>
+        <cost resourcetype="Wood">200.0000</cost>
+        <cost resourcetype="Gold">100.0000</cost>
+
+        <effects>
+            <!-- 10% cheaper infantry -->
+            <effect type="Data" amount="0.90" subtype="Cost" resource="Food"
+                relativity="BasePercent">
+                <target type="ProtoUnit">AbstractInfantry</target>
+            </effect>
+
+            <effect type="Data" amount="0.90" subtype="Cost" resource="Wood"
+                relativity="BasePercent">
+                <target type="ProtoUnit">AbstractInfantry</target>
+            </effect>
+
+            <effect type="Data" amount="0.90" subtype="Cost" resource="Gold"
+                relativity="BasePercent">
+                <target type="ProtoUnit">AbstractInfantry</target>
+            </effect>
+
+            <!-- Unlock units -->
+            <!-- Add train buttons to Military Encampment -->
+            <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+            <effect type="CommandAdd" proto="ModConscript" page="0" column="0">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+            <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+                <target type="ProtoUnit">deSPCUSVolunteer</target>
+            </effect>
+            <effect type="CommandAdd" proto="deSPCUSVolunteer" page="0" column="1">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+
+            <!-- Remove 'this' tech to reuse its slot in the UI with incoming unlocks -->
+            <effect type="CommandRemove" tech="ModConscription">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+            <!-- Add new techs -->
+            <effect type="TechStatus" status="obtainable">ModVeteranConscript</effect>
+            <effect type="CommandAdd" tech="ModVeteranConscript" page="1" column="0">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+            <effect type="TechStatus" status="obtainable">ModImperialVolunteer</effect>
+            <effect type="CommandAdd" tech="ModImperialVolunteer" page="1" column="1">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+            <effect type="TechStatus" status="obtainable">ModWeaponsTraining</effect>
+            <effect type="CommandAdd" tech="ModWeaponsTraining" page="2" column="0">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+        </effects>
+    </tech>
+
+    <!-- ========================= -->
+    <!-- Conscript Upgrade Chain   -->
+    <!-- ========================= -->
+    <tech mergeMode="add" name="ModVeteranConscript" type="Normal">
+        <dbid>90120</dbid>
+        <displaynameid>990120</displaynameid>
+        <rollovertextid>990121</rollovertextid>
+        <researchpoints>30.0000</researchpoints>
+        <status>UNOBTAINABLE</status>
+        <icon>resources\images\icons\techs\Squared Icons\Conscript_Upgrade_1.png</icon>
+
+        <Prereqs>
+            <techstatus status="Active">Fortressize</techstatus>
+        </Prereqs>
+        <cost resourcetype="Wood">250.0000</cost>
+        <cost resourcetype="Gold">250.0000</cost>
+
+        <effects>
+            <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <effect type="Data" amount="1.20" subtype="Damage" allactions="1"
+                relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <effect type="CommandRemove" tech="ModVeteranConscript">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+            <effect type="TechStatus" status="obtainable">ModGuardConscript</effect>
+            <effect type="CommandAdd" tech="ModGuardConscript" page="1" column="0">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+        </effects>
+    </tech>
+
+    <tech mergeMode="add" name="ModGuardConscript" type="Normal">
+        <dbid>90121</dbid>
+        <displaynameid>990122</displaynameid>
+        <rollovertextid>990123</rollovertextid>
+        <researchpoints>40.0000</researchpoints>
+        <status>UNOBTAINABLE</status>
+        <icon>resources\images\icons\techs\Squared Icons\Conscript_Upgrade_2.png</icon>
+
+        <prereqs>
+            <techstatus status="Active">ModVeteranConscript</techstatus>
+            <techstatus status="Active">Industrialize</techstatus>
+        </prereqs>
+
+        <cost resourcetype="Wood">600.0000</cost>
+        <cost resourcetype="Gold">500.0000</cost>
+
+        <effects>
+            <effect type="Data" amount="1.30" subtype="Hitpoints" relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <effect type="Data" amount="1.30" subtype="Damage" allactions="1"
+                relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <effect type="CommandRemove" tech="ModGuardConscript">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+            <effect type="TechStatus" status="obtainable">ModImperialConscript</effect>
+            <effect type="CommandAdd" tech="ModImperialConscript" page="1" column="0">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+        </effects>
+    </tech>
+
+    <tech mergeMode="add" name="ModImperialConscript" type="Normal">
+        <dbid>90122</dbid>
+        <displaynameid>990124</displaynameid>
+        <rollovertextid>990125</rollovertextid>
+        <researchpoints>60.0000</researchpoints>
+        <status>UNOBTAINABLE</status>
+        <icon>resources\images\icons\techs\Squared Icons\Conscript_Upgrade_3.png</icon>
+
+        <prereqs>
+            <techstatus status="Active">ModGuardConscript</techstatus>
+            <techstatus status="Active">Imperialize</techstatus>
+        </prereqs>
+        <cost resourcetype="Wood">1000.0000</cost>
+        <cost resourcetype="Gold">1000.0000</cost>
+
+        <effects>
+            <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <effect type="Data" amount="1.50" subtype="Damage" allactions="1"
+                relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <effect type="CommandRemove" tech="ModImperialConscript">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+        </effects>
+    </tech>
+
+    <!-- ========================= -->
+    <!-- Volunteer Upgrade Chain   -->
+    <!-- ========================= -->
+    <tech mergeMode="add" name="ModImperialVolunteer" type="Normal">
+        <dbid>90123</dbid>
+        <displaynameid>990126</displaynameid>
+        <rollovertextid>990127</rollovertextid>
+        <researchpoints>60.0000</researchpoints>
+        <status>UNOBTAINABLE</status>
+        <icon>resources\images\icons\techs\Squared Icons\Volunteer_Upgrade_3.png</icon>
+
+        <prereqs>
+            <techstatus status="Active">Imperialize</techstatus>
+        </prereqs>
+        <cost resourcetype="Wood">1500.0000</cost>
+        <cost resourcetype="Gold">1500.0000</cost>
+
+        <effects>
+            <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
+                <target type="ProtoUnit">deSPCUSVolunteer</target>
+            </effect>
+
+            <effect type="Data" amount="1.50" subtype="Damage" allactions="1"
+                relativity="BasePercent">
+                <target type="ProtoUnit">deSPCUSVolunteer</target>
+            </effect>
+
+            <effect type="CommandRemove" tech="ModImperialVolunteer">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+        </effects>
+    </tech>
+
+    <tech mergeMode="add" name="ModWeaponsTraining" type="Normal">
+        <dbid>90105</dbid>
+        <displaynameid>990050</displaynameid>
+        <rollovertextid>990051</rollovertextid>
+        <researchpoints>45.0000</researchpoints>
+        <status>UNOBTAINABLE</status>
+        <icon>resources\images\icons\techs\Squared Icons\Weapons_Training.png</icon>
+
+        <Prereqs>
+            <techstatus status="Active">Fortressize</techstatus>
+        </Prereqs>
+        <cost resourcetype="Wood">600.0000</cost>
+        <cost resourcetype="Gold">500.0000</cost>
+
+        <effects>
+            <!-- Conscript ranged attack speed -->
+            <effect type="Data" action="DefendRangedAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <effect type="Data" action="StaggerRangedAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <effect type="Data" action="VolleyRangedAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <!-- Conscript hand attack speed -->
+            <effect type="Data" action="DefendHandAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <effect type="Data" action="StaggerHandAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <effect type="Data" action="VolleyHandAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+            <effect type="Data" action="MeleeHandAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">ModConscript</target>
+            </effect>
+
+
+            <!-- Volunteer ranged attack speed -->
+            <effect type="Data" action="DefendRangedAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">deSPCUSVolunteer</target>
+            </effect>
+
+            <effect type="Data" action="StaggerRangedAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">deSPCUSVolunteer</target>
+            </effect>
+
+            <effect type="Data" action="VolleyRangedAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">deSPCUSVolunteer</target>
+            </effect>
+
+            <!-- Volunteer hand attack speed -->
+            <effect type="Data" action="DefendHandAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">deSPCUSVolunteer</target>
+            </effect>
+
+            <effect type="Data" action="StaggerHandAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">deSPCUSVolunteer</target>
+            </effect>
+
+            <effect type="Data" action="VolleyHandAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">deSPCUSVolunteer</target>
+            </effect>
+
+            <effect type="Data" action="MeleeHandAttack" amount="0.85" subtype="RateOfFire"
+                relativity="BasePercent">
+                <target type="ProtoUnit">deSPCUSVolunteer</target>
+            </effect>
+
+            <effect type="CommandRemove" tech="ModWeaponsTraining">
+                <target type="ProtoUnit">ModCommandPost</target>
+            </effect>
+
+        </effects>
+    </tech>
+
+
+    <tech name="Age0British" type="Normal">
+        <effects>
+            <effect mergeMode="add" type="TechStatus" status="active">CityBuildingEnhancedEnable</effect>
+        </effects>
+    </tech>
+
+
+</techtreemods>

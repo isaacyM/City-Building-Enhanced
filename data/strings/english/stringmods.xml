@@ -1,0 +1,44 @@
+<stringmods>
+    <stringtable>
+        <language name="English">
+
+            <!-- New Buildings  -->
+            <string _locid="876543">Military Encampment</string>
+            <string _locid="876544">A military camp to help train and improve your army and
+                doctrine.</string>
+            <string _locid="876545">Military Encampment</string>
+
+            <!-- Military Units  -->
+
+            <!-- Conscripts  -->
+            <string _locid="990020">Conscript</string>
+            <string _locid="990021">Cheap infantry fresh new recruits</string>
+            <string _locid="990022">Conscript</string>
+
+            <!-- Military Focus -->
+            <string _locid="990030">Infantry Focus</string>
+            <string _locid="990031">Specialize your army around infantry warfare.</string>
+
+            <string _locid="990032">Cavalry Focus</string>
+            <string _locid="990033">Specialize your army around cavalry warfare.</string>
+
+            <string _locid="990034">Artillery Focus</string>
+            <string _locid="990035">Specialize your army around artillery warfare.</string>
+
+            <!-- Infantry Focus Technologies  -->
+            <string _locid="990040">Conscription</string>
+            <string _locid="990041">Unlocks Conscripts and Volunteers. Infantry train 15% faster and cost 10% less.</string>
+
+            <string _locid="990050">Weapons Training</string>
+            <string _locid="990051">Conscripts and Volunteers attack 15% faster.</string>
+
+            <string _locid="990120">Veteran Conscripts</string>
+            <string _locid="990121">Upgrades Conscripts to Veteran status.</string>
+            <string _locid="990130">National Guard</string>
+
+            <string _locid="990126">Imperial Volunteers</string>
+            <string _locid="990127">Upgrades Volunteers to Imperial status.</string>
+
+        </language>
+    </stringtable>
+</stringmods>
