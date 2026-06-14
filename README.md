@@ -2,7 +2,7 @@ City Building Enchanced is a mod for Age of Empires 3
 
 The main feature of this mod is to give you more buildings for you to build as well as technologies to research in game.
 
-Buidlings will be added to a new settler unit that will be the only one able to build these new buildings. Which be available 
+Buildings will be added to a new settler unit that will be the only one able to build these new buildings. Which be available 
 at the town center. 
 
 Technologies added are a mixture of vanilla style additions and complex strategic decisions. Not every technology will be researhcable.
