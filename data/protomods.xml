@@ -637,7 +637,7 @@
         </protoaction>
     </unit>
 
-    <!-- Mounted Infantry Rider -->
+    <!-- Mounted Infantry - Mounted Form -->
     <unit mergeMode="add" id="9033" name="ModMountedInfantryRider">
         <dbid>9033</dbid>
         <displaynameid>9902015</displaynameid>
@@ -671,22 +671,42 @@
         <unitaitype>RangedCombative</unitaitype>
 
         <trainpoints>35.0000</trainpoints>
-        <bounty>16.0000</bounty>
-        <buildbounty>16.0000</buildbounty>
-
-        <cost resourcetype="Food">120.0000</cost>
-        <cost resourcetype="Gold">40.0000</cost>
-
-        <!-- Tech controls actual unlock -->
-        <allowedage>1</allowedage>
-
-        <armor type="Ranged" value="0.1500"> </armor>
+        <buildlimit>11</buildlimit>
 
         <sharedbuildlimitunit>ModMountedInfantryRider</sharedbuildlimitunit>
         <sharedbuildlimitunittypes>
             <unittype>ModMountedInfantryRider</unittype>
             <unittype>ModMountedInfantry</unittype>
         </sharedbuildlimitunittypes>
+
+        <bounty>16.0000</bounty>
+        <buildbounty>16.0000</buildbounty>
+
+        <cost resourcetype="Food">120.0000</cost>
+        <cost resourcetype="Gold">40.0000</cost>
+
+        <allowedage>1</allowedage>
+
+        <armor type="Ranged" value="0.1500"> </armor>
+
+        <veterancybonus>
+            <rank id="0">
+                <veterancymodify modifytype="RangeAbsolute">1.0000</veterancymodify>
+                <veterancymodify modifytype="Speed">1.0500</veterancymodify>
+            </rank>
+            <rank id="1">
+                <veterancymodify modifytype="RangeAbsolute">2.0000</veterancymodify>
+                <veterancymodify modifytype="Speed">1.1000</veterancymodify>
+            </rank>
+            <rank id="2">
+                <veterancymodify modifytype="RangeAbsolute">3.0000</veterancymodify>
+                <veterancymodify modifytype="Speed">1.15000</veterancymodify>
+            </rank>
+        </veterancybonus>
+
+        <sharedselectionunittypes>
+            <unittype>ModMountedInfantry</unittype>
+        </sharedselectionunittypes>
 
         <unittype>LogicalTypeHealed</unittype>
         <unittype>LogicalTypeValidSharpshoot</unittype>
@@ -717,6 +737,7 @@
         <unittype>AbstractHandCavalry</unittype>
         <unittype>AbstractGunpowderCavalry</unittype>
         <unittype>AbstractRangedCavalry</unittype>
+        <unittype>AbstractNativeWarrior</unittype>
 
         <flag>CollidesWithProjectiles</flag>
         <flag>ApplyHandicapTraining</flag>
@@ -725,6 +746,7 @@
         <flag>DontRotateObstruction</flag>
         <flag>ObscuredByUnits</flag>
         <flag>Tracked</flag>
+        <flag>ExperienceUnit</flag>
         <flag>UseSharedBuildLimit</flag>
 
         <command page="10" column="7">Delete</command>
@@ -732,7 +754,7 @@
         <command page="10" column="0">Garrison</command>
         <command page="11" column="0">Abilities</command>
 
-        <tactics>mod_musketheavycavalrydismount.tactics</tactics>
+        <tactics>musketheavycavalrydismount.tactics</tactics>
 
         <protoaction>
             <name>BuildingAttack</name>
@@ -798,6 +820,7 @@
         </protoaction>
     </unit>
 
+
     <!-- Mounted Infantry - Dismounted Form -->
     <unit mergeMode="add" id="9034" name="ModMountedInfantry">
         <dbid>9034</dbid>
@@ -832,21 +855,41 @@
         <unitaitype>RangedCombative</unitaitype>
 
         <trainpoints>30.0000</trainpoints>
-        <bounty>16.0000</bounty>
-        <buildbounty>16.0000</buildbounty>
-
-        <cost resourcetype="Food">120.0000</cost>
-        <cost resourcetype="Gold">40.0000</cost>
-
-        <allowedage>3</allowedage>
-
-        <armor type="Ranged" value="0.1500"> </armor>
 
         <sharedbuildlimitunit>ModMountedInfantryRider</sharedbuildlimitunit>
         <sharedbuildlimitunittypes>
             <unittype>ModMountedInfantryRider</unittype>
             <unittype>ModMountedInfantry</unittype>
         </sharedbuildlimitunittypes>
+
+        <bounty>16.0000</bounty>
+        <buildbounty>16.0000</buildbounty>
+
+        <cost resourcetype="Food">120.0000</cost>
+        <cost resourcetype="Gold">40.0000</cost>
+
+        <allowedage>1</allowedage>
+
+        <armor type="Ranged" value="0.1500"> </armor>
+
+        <veterancybonus>
+            <rank id="0">
+                <veterancymodify modifytype="RangeAbsolute">1.0000</veterancymodify>
+                <veterancymodify modifytype="Speed">1.0500</veterancymodify>
+            </rank>
+            <rank id="1">
+                <veterancymodify modifytype="RangeAbsolute">2.0000</veterancymodify>
+                <veterancymodify modifytype="Speed">1.1000</veterancymodify>
+            </rank>
+            <rank id="2">
+                <veterancymodify modifytype="RangeAbsolute">3.0000</veterancymodify>
+                <veterancymodify modifytype="Speed">1.15000</veterancymodify>
+            </rank>
+        </veterancybonus>
+
+        <sharedselectionunittypes>
+            <unittype>ModMountedInfantryRider</unittype>
+        </sharedselectionunittypes>
 
         <unittype>LogicalTypeHealed</unittype>
         <unittype>LogicalTypeValidSharpshoot</unittype>
@@ -871,6 +914,7 @@
         <unittype>ConvertsHerds</unittype>
         <unittype>AbstractRangedInfantry</unittype>
         <unittype>LogicalTypeInfantryVolleyTactic</unittype>
+        <unittype>AbstractNativeWarrior</unittype>
         <unittype>AbstractInfantry</unittype>
         <unittype>Unit</unittype>
         <unittype>UnitClass</unittype>
@@ -886,6 +930,7 @@
         <flag>ObscuredByUnits</flag>
         <flag>VisibleUnderFogIfGaia</flag>
         <flag>Tracked</flag>
+        <flag>ExperienceUnit</flag>
         <flag>UseSharedBuildLimit</flag>
 
         <command page="10" column="1">Stop</command>
@@ -893,7 +938,7 @@
         <command page="10" column="7">Delete</command>
         <command page="11" column="0">Abilities</command>
 
-        <tactics>mod_riflemanmount.tactics</tactics>
+        <tactics>riflemanmount.tactics</tactics>
 
         <protoaction>
             <name>BuildingAttack</name>
