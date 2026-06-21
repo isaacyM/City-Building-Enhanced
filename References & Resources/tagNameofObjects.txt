@@ -1,4 +1,13 @@
 City Building Enhancement
+Modded buildings (Not Mine)
+
+ - Age of the world
+    - GeorgianArmyCamp
+    - Folwark
+    - OliveOrchard
+    - GrandHospital
+    - JesuitCollege
+
 
 deSPCPapalEmbassy - Big Italian Church
     - Research Speed 

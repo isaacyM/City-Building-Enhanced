@@ -17,6 +17,10 @@
             <string _locid="9900004">A fortified mill that to help enhance economy and defend your colony</string>
             <string _locid="9900005">Bunker Mills</string>
 
+            <string _locid="9900006">Olive Orchard</string>
+            <string _locid="9900007">A large cultivated olive orchard. Villagers gather Wood from its mature trees.</string>
+            <string _locid="9900008">Olive Orchard</string>
+
 
             <!-- ========================================================= -->
             <!-- 9902000s - NEW UNITS                                      -->
@@ -160,6 +164,30 @@
             <string _locid="9909002">Sprawling City Planning</string>
             <string _locid="9909003">Commit to a broad, fast-growing settlement. Unlocks Sprawling City Planning improvements and permanently prevents Citadel City Planning.</string>
 
+
+            <string _locid="9909010">Settled Frontier</string>
+            <string _locid="9909011">Transitioning from a temporary expedition camp to a permanent settlement layout by mapping out foundational grid systems. Increases the Settler limit by 3.</string>
+
+            <string _locid="9909012">Fortified Selective Entry</string>
+            <string _locid="9909013">Establishing heavily guarded checkpoints and background screenings. Increases the Settler limit by 3, increases the Coureur des Bois limit by 3, and improves Settler combat damage by 10%.</string>
+
+            <string _locid="9909014">Anchored Colony</string>
+            <string _locid="9909015">Having weathered the initial trials of the wilderness, the settlement secures permanent foundations. Increases the Settler limit by 4 and the Coureur des Bois limit by 2.</string>
+
+            <string _locid="9909016">Burgeoning Colony</string>
+            <string _locid="9909017">Word of the colony's structural integrity spreads. A steady influx of families arrives. Increases the Settler limit by 5.</string>
+
+            <string _locid="9909018">Ascendant Outpost</string>
+            <string _locid="9909019">News of the colony's absolute safety spreads across the frontier. Increases Settler capacity, improves Settler training time, reduces Settler Food cost, and increases the Coureur des Bois limit.</string>
+
+            <string _locid="9909020">Citadel Metropolitan</string>
+            <string _locid="9909021">Massive secure populations thrive within the safety of giant bastions. Increases Settler capacity, building health, civilian ranged resistance, and artificial-resource gather speed.</string>
+
+            <string _locid="9909022">Bastion Redoubt</string>
+            <string _locid="9909023">Heavy underground bunkers and fallback positions expand the city's defensive capacity. Increases Population Cap and Coureur des Bois capacity while improving Outpost and Tower defenses.</string>
+
+            <string _locid="9909024">Intramural Sovereignty</string>
+            <string _locid="9909025">Every citizen becomes a trained auxiliary defender under total structural safety. Increases Population Cap, removes civilian population cost, and improves Town Center and Fort attack speed.</string>
             <!-- ========================================================= -->
             <!-- 9910000s - DEFENSE UPGRADES                               -->
             <!-- Range: 9910000 - 9910999                                  -->

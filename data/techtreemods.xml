@@ -126,7 +126,9 @@
         </effects>
     </tech>
 
-
+    <!-- ========================================================= -->
+    <!-- Main Mod Activation                                       -->
+    <!-- ========================================================= -->
     <tech mergeMode="add" name="CityBuildingEnhancedEnable" type="Normal">
         <dbid>90100</dbid>
         <status>UNOBTAINABLE</status>
@@ -166,6 +168,13 @@
                 <target type="ProtoUnit">ModBunkerMills</target>
             </effect>
             <effect type="CommandAdd" proto="ModBunkerMills" page="1" column="0">
+                <target type="ProtoUnit">ModArchitect</target>
+            </effect>
+
+            <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+                <target type="ProtoUnit">ModOliveOrchard</target>
+            </effect>
+            <effect type="CommandAdd" proto="ModOliveOrchard" page="1" column="1">
                 <target type="ProtoUnit">ModArchitect</target>
             </effect>
 
@@ -393,6 +402,7 @@
             </effect>
         </effects>
     </tech>
+
     <tech mergeMode="add" name="ModConscription" type="Normal">
         <dbid>90104</dbid>
         <displaynameid>9905002</displaynameid>
@@ -502,6 +512,7 @@
             </effect>
         </effects>
     </tech>
+
     <!--  =========================  -->
     <!--  Conscript Upgrade Chain    -->
     <!--  =========================  -->
@@ -592,6 +603,7 @@
             </effect>
         </effects>
     </tech>
+
     <!--  =========================  -->
     <!--  Volunteer Upgrade Chain    -->
     <!--  =========================  -->
@@ -620,9 +632,11 @@
             </effect>
         </effects>
     </tech>
+
     <!--  =========================  -->
     <!--  Infantry Focus Upgrade Chain     -->
     <!--  =========================  -->
+
     <!--  Age II Upgrades  -->
     <tech mergeMode="add" name="ModCloseQuarters" type="Normal">
         <dbid>90106</dbid>
@@ -777,6 +791,7 @@
             </effect>
         </effects>
     </tech>
+
     <tech mergeMode="add" name="ModCrackShots" type="Normal">
         <dbid>90107</dbid>
         <displaynameid>9905024</displaynameid>
@@ -829,6 +844,7 @@
             </effect>
         </effects>
     </tech>
+
     <tech mergeMode="add" name="ModSwordToAGunFight" type="Normal">
         <dbid>90108</dbid>
         <displaynameid>9905026</displaynameid>
@@ -872,6 +888,7 @@
             </effect>
         </effects>
     </tech>
+
     <!--  Age IV Upgrades  -->
     <tech mergeMode="add" name="ModHoldTheLine" type="Normal">
         <dbid>90109</dbid>
@@ -923,6 +940,7 @@
             </effect>
         </effects>
     </tech>
+
     <tech mergeMode="add" name="ModProfessionalOfficerCorps" type="Normal">
         <dbid>90112</dbid>
         <displaynameid>9905030</displaynameid>
@@ -949,6 +967,7 @@
             </effect>
         </effects>
     </tech>
+
     <!--  Age V Doctrine Upgrades  -->
     <tech mergeMode="add" name="ModFlexibleFormations" type="Normal">
         <dbid>90113</dbid>
@@ -1023,6 +1042,15 @@
                 ModSprawlingCityPlanning
             </effect>
 
+            <!-- Unlock Citadel chain technology -->
+            <effect type="TechStatus" status="obtainable">
+                ModSettledFrontier
+            </effect>
+
+            <effect type="CommandAdd" tech="ModSettledFrontier" page="1" column="0">
+                <target type="ProtoUnit">ModBunkerMills</target>
+            </effect>
+
             <!-- Remove both selection buttons after a route is chosen -->
             <effect type="CommandRemove" tech="ModCitadelCityPlanning">
                 <target type="ProtoUnit">ModCommandPost</target>
@@ -1071,9 +1099,124 @@
     </tech>
 
 
+    <!-- ========================================= -->
+    <!-- Citadel City Planning Tech Tree           -->
+    <!-- ========================================= -->
+
+    <tech mergeMode="add" name="ModSettledFrontier" type="Normal">
+        <dbid>90140</dbid>
+
+        <displaynameid>9909010</displaynameid>
+        <rollovertextid>9909011</rollovertextid>
+
+        <status>UNOBTAINABLE</status>
+
+        <researchpoints>15.0000</researchpoints>
+
+        <cost resourcetype="Food">25.0000</cost>
+        <cost resourcetype="Gold">25.0000</cost>
+
+        <icon>resources\images\icons\techs\Squared Icons\Settled_Frontier.png</icon>
+
+        <flag>CountsTowardEconomicScore</flag>
+
+        <effects>
+
+            <!-- +3 shared Settler / worker cap -->
+            <effect type="Data" amount="3.00" subtype="BuildLimit" relativity="Absolute">
+                <target type="ProtoUnit">LogicalTypeSettlerBuildLimit</target>
+            </effect>
+
+            <!-- Remove this researched tech so its Bunker Mill slot is reused -->
+            <effect type="CommandRemove" tech="ModSettledFrontier">
+                <target type="ProtoUnit">ModBunkerMills</target>
+            </effect>
+
+            <!-- Unlock the next Citadel technology -->
+            <effect type="TechStatus" status="obtainable">
+                ModFortifiedSelectiveEntry
+            </effect>
+
+            <effect type="CommandAdd" tech="ModFortifiedSelectiveEntry" page="0" column="0">
+                <target type="ProtoUnit">ModBunkerMills</target>
+            </effect>
+
+        </effects>
+    </tech>
+
+    <tech mergeMode="add" name="ModFortifiedSelectiveEntry" type="Normal">
+        <dbid>90141</dbid>
+
+        <displaynameid>9909012</displaynameid>
+        <rollovertextid>9909013</rollovertextid>
+
+        <status>UNOBTAINABLE</status>
+
+        <researchpoints>20.0000</researchpoints>
+
+        <prereqs>
+            <techstatus status="Active">ModSettledFrontier</techstatus>
+        </prereqs>
+
+        <cost resourcetype="Food">50.0000</cost>
+        <cost resourcetype="Wood">50.0000</cost>
+        <cost resourcetype="Gold">50.0000</cost>
+
+        <icon>resources\images\icons\techs\Squared Icons\Fortified_Selective_Entry.png</icon>
+
+        <flag>CountsTowardEconomicScore</flag>
+
+        <effects>
+
+            <!-- +3 shared Settler / worker cap -->
+            <effect type="Data" amount="3.00" subtype="BuildLimit" relativity="Absolute">
+                <target type="ProtoUnit">LogicalTypeSettlerBuildLimit</target>
+            </effect>
+
+            <!-- Unlock native Coureur des Bois -->
+            <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+                <target type="ProtoUnit">CoureurCree</target>
+            </effect>
+
+            <effect type="Data" amount="5.00" subtype="BuildLimit" relativity="Assign">
+                <target type="ProtoUnit">CoureurCree</target>
+            </effect>
+
+            <!-- Add it to the Bunker Mills -->
+            <effect type="CommandAdd" proto="CoureurCree" page="0" column="0">
+                <target type="ProtoUnit">ModBunkerMills</target>
+            </effect>
+
+            <!-- +10% damage for all civilian worker types -->
+            <effect type="Data" amount="1.10" subtype="Damage" allactions="1" relativity="BasePercent">
+                <target type="ProtoUnit">AbstractVillager</target>
+            </effect>
+
+            <!-- Unlock Age II continuation -->
+            <effect type="TechStatus" status="obtainable">
+                ModAnchoredColony
+            </effect>
+
+            <effect type="CommandAdd" tech="ModAnchoredColony" page="1" column="0">
+                <target type="ProtoUnit">ModBunkerMills</target>
+            </effect>
+
+            <effect type="CommandRemove" tech="ModFortifiedSelectiveEntry">
+                <target type="ProtoUnit">ModBunkerMills</target>
+            </effect>
+
+        </effects>
+    </tech>
+
+    <!-- ========================================= -->
+    <!-- Sprawling City Planning Tech Tree         -->
+    <!-- ========================================= -->
+
+
     <!--  =========================  -->
     <!--  Universal Mod Activation   -->
     <!--  =========================  -->
+
 
     <!-- European civilizations -->
     <tech name="Age0British" type="Normal">
@@ -1122,6 +1265,11 @@
         <effects>
             <effect mergeMode="add" type="TechStatus" status="active">CityBuildingEnhancedEnable</effect>
         </effects>
+
+        <effect mergeMode="add" type="Data" amount="10.00"
+            subtype="BuildLimit" relativity="Assign">
+            <target type="ProtoUnit">Settler</target>
+        </effect>
     </tech>
 
 
@@ -1170,24 +1318,36 @@
         <effects>
             <effect mergeMode="add" type="TechStatus" status="active">CityBuildingEnhancedEnable</effect>
         </effects>
+        <effect type="Data" amount="10.00" subtype="BuildLimit" relativity="Assign">
+            <target type="ProtoUnit">SettlerNative</target>
+        </effect>
     </tech>
 
     <tech name="DEAge0Swedish" type="Normal">
         <effects>
             <effect mergeMode="add" type="TechStatus" status="active">CityBuildingEnhancedEnable</effect>
         </effects>
+        <effect type="Data" amount="10.00" subtype="BuildLimit" relativity="Assign">
+            <target type="ProtoUnit">Settler</target>
+        </effect>
     </tech>
 
     <tech name="DEAge0Americans" type="Normal">
         <effects>
             <effect mergeMode="add" type="TechStatus" status="active">CityBuildingEnhancedEnable</effect>
         </effects>
+        <effect type="Data" amount="10.00" subtype="BuildLimit" relativity="Assign">
+            <target type="ProtoUnit">Settler</target>
+        </effect>
     </tech>
 
     <tech name="DEAge0Mexicans" type="Normal">
         <effects>
             <effect mergeMode="add" type="TechStatus" status="active">CityBuildingEnhancedEnable</effect>
         </effects>
+        <effect type="Data" amount="10.00" subtype="BuildLimit" relativity="Assign">
+            <target type="ProtoUnit">Settler</target>
+        </effect>
     </tech>
 
     <tech name="DEAge0Hausa" type="Normal">
