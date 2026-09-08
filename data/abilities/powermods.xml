@@ -156,15 +156,15 @@
     <isauxiliarypower>1</isauxiliarypower>
   </power>
 
-  <!-- Last Bastion: direct invulnerability mirrors the proven vanilla Divine Right -->
-  <!-- pattern. Regeneration carries its independent duration in the tactics action. -->
+  <!-- Last Bastion: direct invulnerability and the healing action share -->
+  <!-- this power's 7-second active time. No separate healing timer is used. -->
   <power name="CBELastBastion" type="GeneralEffect">
     <displaynameid>9914097</displaynameid>
     <rolloverid>9914098</rolloverid>
     <timerrolloverid>9914099</timerrolloverid>
     <icon>resources\images\icons\Abilites\cbe_last_bastion.png</icon>
     <minimapeventtime sendalertto="none">1</minimapeventtime>
-    <activetime>5</activetime>
+    <activetime>7</activetime>
     <effect type="CanTargetButTakesNoDamage">
       <target type="ProtoUnit">CBELeagueShieldBearer</target>
     </effect>

@@ -275,17 +275,24 @@
             <effect type="CommandAdd" proto="CBEDispatchOffice" page="3" column="3">
                 <target type="ProtoUnit">ModArchitect</target>
             </effect>
+            <!-- ========================================================= -->
+            <!-- GUILD HALL RELEASE GATE                                  -->
+            <!-- The unfinished Guild Hall system is intentionally kept   -->
+            <!-- dormant for release. Restore this preserved block when   -->
+            <!-- development resumes.                                     -->
+            <!--
             <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
                 <target type="ProtoUnit">CBEGuildHall</target>
             </effect>
             <effect type="CommandAdd" proto="CBEGuildHall" page="3" column="4">
                 <target type="ProtoUnit">ModArchitect</target>
             </effect>
-            <!-- Enable the four mutually exclusive Guild paths. -->
             <effect type="TechStatus" status="obtainable">CBEChooseAdventurersLeague</effect>
             <effect type="TechStatus" status="obtainable">CBEChooseBlackCompany</effect>
             <effect type="TechStatus" status="obtainable">CBEChooseHuntersGuild</effect>
             <effect type="TechStatus" status="obtainable">CBEChooseOrderSilverband</effect>
+            -->
+            <!-- ========================================================= -->
 
             <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
                 <target type="ProtoUnit">ModOliveOrchard</target>

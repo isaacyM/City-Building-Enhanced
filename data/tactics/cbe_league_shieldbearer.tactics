@@ -247,8 +247,8 @@
     <modelattachmentbone>bonethatdoesntexist</modelattachmentbone>
   </action>
 
-  <!-- Last Bastion: HealRate supplies temporary in-combat healing separately -->
-  <!-- from Shielder's percentage-based idle UnitRegenRate. -->
+  <!-- Last Bastion: flat in-combat healing enabled by the shared 7-second power. -->
+  <!-- No independent duration; Defy Death's idle UnitRegenRate remains separate. -->
   <action>
     <name stringid="9914097">CBELastBastionRegeneration</name>
     <type>AutoRangedModify</type>
@@ -258,9 +258,8 @@
     <modifyself>1</modifyself>
     <modifyselfonly>1</modifyselfonly>
     <persistent>1</persistent>
-    <modifyduration>14000</modifyduration>
     <modifytype>HealRate</modifytype>
-    <modifyamount>20.0</modifyamount>
+    <modifyamount>100.0</modifyamount>
   </action>
 
   <tactic>Melee<action priority="130">CBEShieldBashAttack</action><action priority="125">CBEHeavyStrikeAttack</action><action priority="100">BuildingAttack</action><action priority="75">MeleeHandAttack</action><action priority="2">ChallengeAttack</action><action>CBEChallengeEnemyStrength</action><action>CBEHardWonRenownXP</action><action>CBEFieldNotesBountyAura</action><action>CBEIAmYourShieldProtectionAura</action><action>CBEShieldDisciplineRegeneration</action><action>CBEHoldTheBreachRegeneration</action><action>CBEIAmYourShieldAlliedStrength</action><action>CBEChallengeDefense</action><action>CBELastBastionDefense</action><action>CBELastBastionRegeneration</action><attacktype>LogicalTypeHandUnitsAttack</attacktype><autoattacktype>LogicalTypeHandUnitsAutoAttack</autoattacktype><attackresponsetype>LogicalTypeHandUnitsAttack</attackresponsetype><runaway>0</runaway><autoretarget>1</autoretarget><idleanim>Charge_idle</idleanim><boredanim>Charge_bored</boredanim><deathanim>Death_by_melee</deathanim><walkanim>Charge_walk</walkanim><joganim>Charge_jog</joganim><runanim>Charge_run</runanim></tactic>

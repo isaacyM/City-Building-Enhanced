@@ -836,7 +836,7 @@
             <string _locid="9914066">Into the Breach</string>
             <string _locid="9914067">Unlocks Shield Bash and Heavy Strike. Shield Bash deals 25 Hand damage and stuns its target for 3 seconds every 12 seconds. Heavy Strike deals 75 Hand damage with +25% damage against Guardians, Pets, and Infantry every 14 seconds.</string>
             <string _locid="9914068">Hold the Breach</string>
-            <string _locid="9914069">Increases Shielder's constant regeneration by another 3 hit points per second, for 5 hit points per second total, and unlocks Last Bastion. Shielder becomes invulnerable for 5 seconds and, for 14 seconds, regenerates an additional 20 hit points per second and takes 25% less damage. Cooldown: 60 seconds.</string>
+            <string _locid="9914069">Increases Shielder's constant regeneration by another 3 hit points per second, for 5 hit points per second total, and unlocks Last Bastion. For 7 seconds, Shielder becomes invulnerable and regenerates an additional 100 hit points per second, including during combat. Cooldown: 60 seconds.</string>
             <string _locid="9914070">Interpose</string>
             <string _locid="9914071">Shielder technology. Effects to be determined.</string>
             <string _locid="9914072">Unyielding Guardian</string>
@@ -870,8 +870,8 @@
 
             <!-- Shielder: Last Bastion -->
             <string _locid="9914097">Last Bastion</string>
-            <string _locid="9914098">Effect test: Shielder regenerates an additional 20 hit points per second for 14 seconds, including while in combat. Cooldown: 60 seconds.</string>
-            <string _locid="9914099">Last Bastion: +20 hit points per second.</string>
+            <string _locid="9914098">Effect test: For 7 seconds, Shielder becomes invulnerable and regenerates an additional 100 hit points per second, including during combat. Cooldown: 60 seconds.</string>
+            <string _locid="9914099">Last Bastion: Invulnerable and +100 hit points per second for 7 seconds.</string>
 
             <!-- Shielder Class Passive: Hold the Breach cumulative state -->
             <string _locid="9914100">Block: 10% chance to completely block an incoming attack. Melee armor: +5 percentage points. Constant regeneration: +5 hit points per second. Nearby allied military units within 24 range take 10% less damage. Damage: +5% per nearby ally, up to +25%. Hit points: +50. Additional damage: +15%.</string>
